@@ -1,0 +1,147 @@
+header{
+    grid-area: head;
+    text-align: center;
+    background-color: lightslategray;
+}
+header h2{
+    color: darkblue;
+    margin: auto;
+    padding: 4px;
+    font-size: 40px;
+}
+header p{
+    font-size: 20px;
+    color: blue;
+    margin: 0;
+}
+nav{
+    grid-area: nav;
+    background-color: cornflowerblue;
+    width: 15rem;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    margin-top: 1.4rem;
+    padding: 1rem;
+}
+nav ul li:hover{
+    background-color: aqua;
+    color: blue;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+
+}
+nav ul li a:hover{
+    background-color: aqua;
+    color: blue;
+}
+main{
+    grid-area: main;
+}
+main .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40%;
+    height: auto;
+    box-shadow: 8px 6px blue;
+}
+.card h3{
+    color: blue;
+}
+.card:hover{
+    background-color: lightblue;
+    color: blueviolet;
+}
+
+aside{
+    grid-area: aside;
+    background-color: aquamarine;
+}
+aside h2{
+    color: blue;
+    margin: auto;
+    padding-top: 8px;
+    font-size: 40px;
+}
+.sidebar-content{
+    background-color: aqua;
+    width: 20rem;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar-contents{
+    box-shadow: 8px 6px burlywood;
+}
+.sidebar-contents h3{
+    margin-top: 0;
+    color: blue;
+}
+footer{
+    grid-area: foot;
+    background-color: blueviolet;
+    color: aqua;
+}
+.container{
+    background-color: aqua;
+    display: grid;
+    grid-template-areas: 
+    'head head head head head head'
+    'nav main main main aside aside'
+    'foot foot foot foot foot foot';
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .container{
+        grid-template-areas: 
+        'head head head head head head'
+        'nav main main main main main'
+        'aside aside aside aside aside aside'
+        'foot foot foot foot foot foot';
+    }
+    .card{
+        width: 90%;
+    }
+    nav ul li{
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    header h2{
+        font-size: 30px;
+    }
+    header p{
+        font-size: 16px;
+    }
+    .card{
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    .sidebar-content{
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+}
